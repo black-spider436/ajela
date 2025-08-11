@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sir bravin Verification</title>
+    <style>
+        :root {
+            --ios-primary: #007AFF;
+            --ios-background: rgba(242, 242, 247, 0.8);
+            --ios-card: rgba(255, 255, 255, 0.7);
+            --ios-text: #1C1C1E;
+            --ios-subtext: #636366;
+            --ios-success: #34C759;
+            --ios-error: #FF3B30;
+            --ios-border: rgba(60, 60, 67, 0.18);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --ios-background: rgba(28, 28, 30, 0.8);
+                --ios-card: rgba(44, 44, 46, 0.7);
+                --ios-text: #FFFFFF;
+                --ios-subtext: #AEAEB2;
+                --ios-border: rgba(84, 84, 88, 0.6);
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background: var(--ios-background);
+            color: var(--ios-text);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(0, 122, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(52, 199, 89, 0.15) 0%, transparent 50%);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 420px;
+            background: var(--ios-card);
+            border-radius: 24px;
+            padding: 32px;
+            box-shadow: 
+                0 8px 32px rgba(0, 0, 0, 0.1),
+                0 1px 2px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--ios-border);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: var(--ios-subtext);
+            text-align: center;
+            margin-bottom: 28px;
+            line-height: 1.4;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: var(--ios-subtext);
+        }
+
+        input {
+            width: 100%;
+            padding: 14px 16px;
+            font-size: 16px;
+            border-radius: 12px;
+            border: 1px solid var(--ios-border);
+            background: rgba(120, 120, 128, 0.12);
+            color: var(--ios-text);
+            transition: all 0.2s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--ios-primary);
+            background: rgba(120, 120, 128, 0.08);
+        }
+
+        .button {
+            width: 100%;
+            padding: 14px;
+            border-radius: 12px;
+            border: none;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .button-primary {
+            background: var(--ios-primary);
+            color: white;
+        }
+
+        .button-primary:hover {
+            background: #0062CC;
+            transform: translateY(-1px);
+        }
+
+        .button-primary:active {
+            transform: translateY(0);
+        }
+
+        .button-secondary {
+            background: rgba(120, 120, 128, 0.12);
+            color: var(--ios-primary);
+        }
+
+        .button-secondary:hover {
+            background: rgba(120, 120, 128, 0.18);
+        }
+
+        .result {
+            padding: 16px;
+            border-radius: 12px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 15px;
+            display: none;
+        }
+
+        .success {
+            background: rgba(52, 199, 89, 0.15);
+            color: var(--ios-success);
+            display: block;
+        }
+
+        .error {
+            background: rgba(255, 59, 48, 0.15);
+            color: var(--ios-error);
+            display: block;
+        }
+
+        .warning {
+            background: rgba(255, 204, 0, 0.15);
+            color: #FFCC00;
+            display: block;
+        }
+
+        .icon {
+            margin-right: 8px;
+            font-size: 18px;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .loading {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+            margin-right: 8px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>sir bravin Verification</h1>
+        <p class="subtitle">Before deploying jeepers creeper xmd to Heroku, please verify you've forked the required repository</p>
+        
+        <div class="input-group">
+            <label for="githubUsername">GitHub Username</label>
+            <input type="text" id="githubUsername" placeholder="your_github_username" autocomplete="off">
+        </div>
+        
+        <button id="verifyBtn" class="button button-primary">
+            <span class="icon">🔍</span> Verify Fork
+        </button>
+        
+        <div id="result" class="result"></div>
+        
+        <button id="forkBtn" class="button button-secondary hidden">
+            <span class="icon">⎘</span> Fork Repository
+        </button>
+        
+        <button id="deployBtn" class="button button-primary hidden">
+            <span class="icon">🚀</span> Deploy to Heroku
+        </button>
+    </div>
+
+    <script>
+        // Configuration - Update these with your repository details
+        const REPO_OWNER = 'developer-sir bravin';
+        const REPO_NAME = 'Jeepers creeper-xmd';
+        const HEROKU_DEPLOY_URL = 'https://heroku.com/deploy?template=https://github.com/black-spider436/jeepers-creeper-xmd';
+        
+        // DOM elements
+        const verifyBtn = document.getElementById('verifyBtn');
+        const forkBtn = document.getElementById('forkBtn');
+        const deployBtn = document.getElementById('deployBtn');
+        const resultDiv = document.getElementById('result');
+        const usernameInput = document.getElementById('githubUsername');
+        
+        // Event listeners
+        verifyBtn.addEventListener('click', verifyFork);
+        forkBtn.addEventListener('click', forkRepository);
+        deployBtn.addEventListener('click', deployToHeroku);
+        
+        // Main verification function
+        async function verifyFork() {
+            const username = usernameInput.value.trim();
+            
+            if (!username) {
+                showResult('Please enter your GitHub username', 'error');
+                return;
+            }
+            
+            // Show loading state
+            verifyBtn.innerHTML = '<span class="loading"></span> Verifying...';
+            verifyBtn.disabled = true;
+            resultDiv.className = 'result';
+            resultDiv.textContent = 'Checking repository and fork status...';
+            resultDiv.style.display = 'block';
+            
+            try {
+                // First check if the main repository exists
+                const repoExists = await checkRepositoryExists();
+                
+                if (!repoExists) {
+                    showResult('⚠️ The main repository does not exist or is private', 'error');
+                    forkBtn.classList.add('hidden');
+                    deployBtn.classList.add('hidden');
+                    return;
+                }
+                
+                // Then check if user has forked it
+                const hasForked = await checkUserFork(username);
+                
+                if (hasForked) {
+                    showResult('✓ Success! You have forked the repository.', 'success');
+                    deployBtn.classList.remove('hidden');
+                    forkBtn.classList.add('hidden');
+                } else {
+                    showResult('✗ You haven\'t forked the repository yet.', 'error');
+                    forkBtn.classList.remove('hidden');
+                    deployBtn.classList.add('hidden');
+                }
+            } catch (error) {
+                showResult('⚠️ Error: ' + error.message, 'error');
+                console.error('Verification error:', error);
+            } finally {
+                // Reset button state
+                verifyBtn.innerHTML = '<span class="icon">🔍</span> Verify Fork';
+                verifyBtn.disabled = false;
+            }
+        }
+        
+        // Check if main repository exists
+        async function checkRepositoryExists() {
+            try {
+                const response = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}`);
+                return response.ok;
+            } catch (error) {
+                console.error('Error checking repository:', error);
+                return false;
+            }
+        }
+        
+        // Check if user has forked the repository
+        async function checkUserFork(username) {
+            try {
+                // First check if the user exists
+                const userResponse = await fetch(`https://api.github.com/users/${username}`);
+                if (!userResponse.ok) {
+                    throw new Error('GitHub user not found');
+                }
+                
+                // Then check if they have forked the repo
+                const forksResponse = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/forks`);
+                if (!forksResponse.ok) {
+                    throw new Error('Error checking forks');
+                }
+                
+                const forks = await forksResponse.json();
+                return forks.some(fork => fork.owner.login.toLowerCase() === username.toLowerCase());
+            } catch (error) {
+                console.error('Error checking fork:', error);
+                throw error;
+            }
+        }
+        
+        function forkRepository() {
+            window.open(`https://github.com/${REPO_OWNER}/${REPO_NAME}/fork`, '_blank');
+            showResult('Opened fork page in new tab. After forking, please verify again.', 'warning');
+        }
+        
+        function deployToHeroku() {
+            window.location.href = HEROKU_DEPLOY_URL;
+        }
+        
+        function showResult(message, type) {
+            resultDiv.textContent = message;
+            resultDiv.className = `result ${type}`;
+            resultDiv.style.display = 'block';
+        }
+        
+        // Bonus: Add keyboard support
+        usernameInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                verifyFork();
+            }
+        });
+    </script>
+</body>
+</html>
