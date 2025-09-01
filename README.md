@@ -24,5 +24,4 @@
   </div>
 <td><a href="https://jeepers-creepers-xmd-session-link-1.onrender.com" target="_blank"><img src="https://img.shields.io/badge/jeepescreepersession-6971FF?style=for-the-badge&logo=github&logoColor=white&labelColor=000000"/></a></td>
     </tr>
-
-
+Happy birthday, bestie! Even though I can't be there to celebrate with you, know that I'm sending you the biggest birthday hugs and cheering you on from afar!"
