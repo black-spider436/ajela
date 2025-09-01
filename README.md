@@ -22,6 +22,5 @@
 </h1>
  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=70&pause=500&color=8A2BE2&center=true&width=1150&height=200&lines=KUMI+NA+NNE+SUPUU" alt="Typing SVG" /></a>
   </div>
-<td><a href="https://jeepers-creepers-xmd-session-link-1.onrender.com" target="_blank"><img src="https://img.shields.io/badge/jeepescreepersession-6971FF?style=for-the-badge&logo=github&logoColor=white&labelColor=000000"/></a></td>
-    </tr>
+
 Happy birthday, bestie! Even though I can't be there to celebrate with you, know that I'm sending you the biggest birthday hugs and cheering you on from afar!"
